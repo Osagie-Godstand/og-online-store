@@ -1,0 +1,32 @@
+using terminal
+step 1
+ go mod init github.com/Osagie-Godstand/<project-name>/   -> then press enter
+
+step 2
+ download fiber framework or any framework you want to use
+go get github.com/gofiber/fiber/v2
+
+step 3
+test fiber by creating a router like this: 
+
+func main() {
+	app := fiber.New()
+	app.Get("/foo", handleFoo)
+	app.Listen(":8080")
+}
+
+func handleFoo(c *fiber.Ctx) error {
+	return c.JSON(map[string]string{"msg": "working just fine!"})
+}
+
+enter : go run main.go in the terminal to test if it works and use postman or thunder client
+to get request the data with url : http://localhost:8080/foo 
+
+step 4
+create a Makefile that allows you to build, run, test and seed your go files
+by using simple command: make run instead of go run main.go
+other commands: make build, make test and make seed.
+
+first use: make build 
+
+then we can use make run again.
