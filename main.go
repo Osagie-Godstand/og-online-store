@@ -46,12 +46,12 @@ func main() {
 	apiv1.Get("/user", userHandler.HandleGetUsers)
 	apiv1.Get("/user/:id", userHandler.HandleGetUser)
 
-	// admin/product
-	adminProductRoute := admin.Get("/product")
-	adminProductRoute.Get("/:id", productHandler.HandleGetProductByID)
-	adminProductRoute.Get("/", productHandler.HandleGetProducts)
-	adminProductRoute.Post("/", productHandler.HandlePostProduct)
+	admin.Get("/product/:id", productHandler.HandleGetProductByID)
+	admin.Get("/product", productHandler.HandleGetProducts)
+	admin.Post("/product", productHandler.HandlePostProduct)
 
+	listenAddr := os.Getenv("HTTP_LISTEN_ADDRESS")
+	app.Listen(listenAddr)
 }
 
 func init() {
