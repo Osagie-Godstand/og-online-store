@@ -1,4 +1,4 @@
-# tdd-online-store
+# og-online-store (currently a work in progress)
 Online Store Backend using Fiber framework and MongoDB
 
 ## Project outline
@@ -7,7 +7,6 @@ Online Store Backend using Fiber framework and MongoDB
 - Authentication and authorisation -> JWT tokens
 - Store
 - Products
-- Scripts -> database management
 
 ## Resources
 ### Mongodb driver
@@ -38,5 +37,11 @@ go get github.com/gofiber/fiber/v2
 ## Docker 
 ### Installing mongodb as a Docker container
 ...
-Docker run --name mongodb -d mongo:latest -p 27017:27017
+docker run --name mongodb -d mongo:latest -p 27017:27017
+...
+
+## godotenv (.env) file
+...
+go install github.com/joho/godotenv/cmd/godotenv@latest
+go get github.com/joho/godotenv
 ...
