@@ -1,7 +1,6 @@
 package api
 
 import (
-	"errors"
 	"net/http"
 
 	"github.com/Osagie-Godstand/og-online-store/db"
@@ -40,31 +39,24 @@ func (h *ProductHandler) HandlePostProduct(c *fiber.Ctx) error {
 		})
 	}
 
-	return c.JSON(fiber.StatusOK, product)
+	return c.JSON(product)
 }
 
 func (h *ProductHandler) HandleGetProducts(c *fiber.Ctx) error {
 	products, err := h.store.GetAll(c.Context())
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			"error": "Failed to retreive products",
+			"error": "Failed to retrieve products",
 		})
 	}
-	return c.JSON(http.StatusOK, products)
+	return c.JSON(products)
 }
 
 func (h *ProductHandler) HandleGetProductByID(c *fiber.Ctx) error {
 	id := c.Params("id")
-
-	product, err := h.store.GetByID(c.Context, id)
+	product, err := h.store.GetByID(c.Context(), id)
 	if err != nil {
-		if errors.Is(err, ErrProductNotFound) {
-			return c.Status(http.StatusNotFound).JSON(fiber.Map{
-				"message": "Product not found",
-			})
-		}
-		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
-			"message": "Internal server error"})
+		return fiber.NewError(http.StatusInternalServerError, "Internal server error")
 	}
 
 	return c.JSON(product)

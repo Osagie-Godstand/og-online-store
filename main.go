@@ -25,12 +25,8 @@ func main() {
 	}
 
 	var (
-		userStore    = db.NewMongoUserStore(client)
-		productStore = db.NewMongoProductStore(client.Database("og-online-store"))
-		store        = &db.Store{
-			User:    userStore,
-			Product: *productStore,
-		}
+		userStore      = db.NewMongoUserStore(client)
+		productStore   = db.NewMongoProductStore(client.Database("og-online-store"))
 		userHandler    = api.NewUserHandler(userStore)
 		authHandler    = api.NewAuthHandler(userStore)
 		productHandler = api.NewProductHandler(productStore)
