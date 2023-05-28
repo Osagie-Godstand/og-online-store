@@ -4,15 +4,12 @@ build:
 run: 
 	@./bin/api
 
-seed:
+seed: 
 	@go run scripts/seed.go
 
 
 test: 
 	@go test -v ./...
-
-
-
 
 
 
