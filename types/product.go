@@ -15,8 +15,10 @@ type Product struct {
 }
 
 type CreateProductRequest struct {
+	ID   string `json:"id"`
 	SKU  string `json:"sku"`
 	Name string `json:"name"`
+	Slug string `json:"slug"`
 }
 
 func NewProductFromRequest(req *CreateProductRequest) (*Product, error) {
@@ -28,6 +30,7 @@ func NewProductFromRequest(req *CreateProductRequest) (*Product, error) {
 	slug := strings.Join(parts, "-")
 
 	return &Product{
+		ID:   req.ID,
 		SKU:  req.SKU,
 		Name: req.Name,
 		Slug: slug,

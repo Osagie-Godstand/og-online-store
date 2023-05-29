@@ -26,7 +26,7 @@ func (s *MongoProductStore) Insert(ctx context.Context, p *types.Product) error 
 	if err != nil {
 		return err
 	}
-	p.ID = res.InsertedID.(primitive.ObjectID).Hex()
+	p.ID = res.InsertedID.(string)
 
 	return err
 }

@@ -32,12 +32,15 @@ func main() {
 	}
 
 	store := &db.Store{
-		User: db.NewMongoUserStore(client),
+		User:    db.NewMongoUserStore(client),
+		Product: *db.NewMongoProductStore(client.Database("og-online-store")),
 	}
 
 	user := fixtures.AddUser(store, "james", "foo", false)
 	fmt.Println("james ->", api.CreateTokenFromUser(user))
 	admin := fixtures.AddUser(store, "admin", "admin", true)
 	fmt.Println("admin ->", api.CreateTokenFromUser(admin))
+	product := fixtures.AddProduct(store, "25", "22446688", "ball", "blue")
+	fmt.Println("product ->", product.ID)
 
 }

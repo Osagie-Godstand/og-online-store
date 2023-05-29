@@ -19,10 +19,25 @@ func AddUser(store *db.Store, fn, ln string, admin bool) *types.User {
 	if err != nil {
 		log.Fatal(err)
 	}
-	user.IsAdmin = admin
+	//user.IsAdmin = admin
 	insertedUser, err := store.User.InsertUser(context.TODO(), user)
 	if err != nil {
 		log.Fatal(err)
 	}
 	return insertedUser
+}
+
+func AddProduct(store *db.Store, ID string, SKU string, Name string, Slug string) *types.Product {
+	product, err := types.NewProductFromRequest(&types.CreateProductRequest{
+		ID:   fmt.Sprintf("%s", ID),
+		SKU:  fmt.Sprintf("%s", SKU),
+		Name: Name,
+		Slug: Slug,
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return product
+
 }
