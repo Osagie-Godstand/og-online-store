@@ -1,13 +1,6 @@
 # og-online-store (currently a work in progress)
 Online Store Backend using Fiber framework and MongoDB
 
-## Project outline
-
-- users -> buy products from an online store
-- Authentication and authorisation -> JWT tokens
-- Store
-- Products
-
 ## Resources
 ### Mongodb driver
 Documantation
