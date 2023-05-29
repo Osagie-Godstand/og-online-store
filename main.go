@@ -33,7 +33,7 @@ func main() {
 		app            = fiber.New(config)
 		auth           = app.Group("/api")
 		apiv1          = app.Group("/api/v1", api.JWTAuthentication(userStore))
-		admin          = apiv1.Group("/admin", api.AdminAuth)
+		//admin          = apiv1.Group("/admin", api.AdminAuth)
 	)
 
 	// auth
@@ -48,9 +48,6 @@ func main() {
 
 	apiv1.Get("/product/:id", productHandler.HandleGetProductByID)
 	apiv1.Post("/product", productHandler.HandlePostProduct)
-
-	// admin handler
-	admin.Get("/product", productHandler.HandleGetProducts)
 
 	listenAddr := os.Getenv("HTTP_LISTEN_ADDRESS")
 	app.Listen(listenAddr)
