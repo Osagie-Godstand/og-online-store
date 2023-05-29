@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/Osagie-Godstand/og-online-store/types"
 	"go.mongodb.org/mongo-driver/bson"
@@ -17,7 +18,7 @@ type MongoProductStore struct {
 func NewMongoProductStore(db *mongo.Database) *MongoProductStore {
 	return &MongoProductStore{
 		db:   db,
-		coll: "products",
+		coll: ("products"),
 	}
 }
 
@@ -26,7 +27,9 @@ func (s *MongoProductStore) Insert(ctx context.Context, p *types.Product) error 
 	if err != nil {
 		return err
 	}
-	p.ID = res.InsertedID.(string)
+	p.ID = res.InsertedID.(primitive.ObjectID)
+	InsertedIDString := p.ID.Hex()
+	fmt.Println(InsertedIDString)
 
 	return err
 }

@@ -27,9 +27,8 @@ func AddUser(store *db.Store, fn, ln string, admin bool) *types.User {
 	return insertedUser
 }
 
-func AddProduct(store *db.Store, ID string, SKU string, Name string, Slug string) *types.Product {
+func AddProduct(store *db.Store, SKU string, Name string, Slug string) *types.Product {
 	product, err := types.NewProductFromRequest(&types.CreateProductRequest{
-		ID:   fmt.Sprintf("%s", ID),
 		SKU:  fmt.Sprintf("%s", SKU),
 		Name: Name,
 		Slug: Slug,

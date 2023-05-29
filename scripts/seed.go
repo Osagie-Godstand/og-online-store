@@ -40,7 +40,7 @@ func main() {
 	fmt.Println("james ->", api.CreateTokenFromUser(user))
 	admin := fixtures.AddUser(store, "admin", "admin", true)
 	fmt.Println("admin ->", api.CreateTokenFromUser(admin))
-	product := fixtures.AddProduct(store, "25", "22446688", "ball", "blue")
+	product := fixtures.AddProduct(store, "22446688", "ball", "blue")
 	fmt.Println("product ->", product.ID)
 
 }

@@ -3,19 +3,20 @@ package types
 import (
 	"fmt"
 	"strings"
+
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 const minProductNameLen = 3
 
 type Product struct {
-	ID   string `bson:"_id,omitempty" json:"id"`
-	SKU  string `bson:"sku" json:"sku"`
-	Name string `bson:"name" json:"name"`
-	Slug string `bson:"slug" json:"slug"`
+	ID   primitive.ObjectID `bson:"_id,omitempty" json:"id"`
+	SKU  string             `bson:"sku" json:"sku"`
+	Name string             `bson:"name" json:"name"`
+	Slug string             `bson:"slug" json:"slug"`
 }
 
 type CreateProductRequest struct {
-	ID   string `json:"id"`
 	SKU  string `json:"sku"`
 	Name string `json:"name"`
 	Slug string `json:"slug"`
@@ -30,7 +31,6 @@ func NewProductFromRequest(req *CreateProductRequest) (*Product, error) {
 	slug := strings.Join(parts, "-")
 
 	return &Product{
-		ID:   req.ID,
 		SKU:  req.SKU,
 		Name: req.Name,
 		Slug: slug,
