@@ -49,8 +49,7 @@ func main() {
 	apiv1.Get("/product/:id", productHandler.HandleGetProductByID)
 	apiv1.Post("/product", productHandler.HandlePostProduct)
 
-	// admin handler
-	admin.Get("/booking", authHandler.HandleAuthenticate)
+	admin.Get("/product", authHandler.HandleAuthenticate)
 
 	listenAddr := os.Getenv("HTTP_LISTEN_ADDRESS")
 	app.Listen(listenAddr)
