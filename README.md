@@ -1,4 +1,4 @@
-# og-online-store (beta version)
+# og-online-store (work in good progress)
 Online Store Backend using Fiber framework and MongoDB
 
 ## Resources
