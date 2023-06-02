@@ -22,7 +22,6 @@ type Product struct {
 type CreateProductRequest struct {
 	SKU   string  `json:"sku"`
 	Name  string  `json:"name"`
-	Slug  string  `json:"slug"`
 	Price float64 `json:"price"`
 }
 
