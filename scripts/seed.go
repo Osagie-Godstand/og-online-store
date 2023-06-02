@@ -36,7 +36,7 @@ func main() {
 		Product: *db.NewMongoProductStore(client.Database("og-online-store")),
 	}
 
-	user := fixtures.AddUser(store, "james", "foo", false)
+	user := fixtures.AddUser(store, "osagie", "desmond", false)
 	fmt.Println("james ->", api.CreateTokenFromUser(user))
 	admin := fixtures.AddUser(store, "admin", "admin", true)
 	fmt.Println("admin ->", api.CreateTokenFromUser(admin))

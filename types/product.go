@@ -12,7 +12,7 @@ const minProductNameLen = 3
 const minProductPriceLen = 1
 
 type Product struct {
-	ID    primitive.ObjectID `bson:"_id,omitempty" json:"id"`
+	ID    primitive.ObjectID `bson:"_id,omitempty" json:"id,omitempty"`
 	SKU   string             `bson:"sku" json:"sku"`
 	Name  string             `bson:"name" json:"name"`
 	Slug  string             `bson:"slug" json:"slug"`
