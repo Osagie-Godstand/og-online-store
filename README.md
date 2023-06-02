@@ -1,12 +1,12 @@
-# og-online-store ()
+# og-online-store 
 Online Store Backend using Fiber framework and MongoDB
 
 ## Project ouline v1
-Models: user and product
-Controllers: user_handler, product_handler
-Authentication and Authorisation -> JWT tokens
-Scripts -> database management -> seeding, migration
-Testing for user and auth handlers
+- Models: user and product
+- Controllers: user_handler, product_handler
+- Authentication and Authorisation -> JWT tokens
+- Scripts -> database management -> seeding, migration
+- Testing for user and auth handlers
 
 ## Resources
 ### Mongodb driver
