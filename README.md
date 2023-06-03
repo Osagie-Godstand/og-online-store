@@ -1,7 +1,7 @@
 # og-online-store 
 Online Store Backend using Fiber framework and MongoDB
 
-## Project ouline v1
+## Project outline v1
 - Models: user and product
 - Controllers: user_handler, product_handler
 - Authentication and Authorisation -> JWT tokens
