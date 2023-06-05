@@ -10,6 +10,12 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
+type ProductStorer interface {
+	InsertProduct(context.Context, *types.Product) (*types.Product, error)
+	GetByID(context.Context, string) (*types.Product, error)
+	GetAll(context.Context) ([]*types.Product, error)
+}
+
 type MongoProductStore struct {
 	db   *mongo.Database
 	coll string
@@ -22,16 +28,16 @@ func NewMongoProductStore(db *mongo.Database) *MongoProductStore {
 	}
 }
 
-func (s *MongoProductStore) Insert(ctx context.Context, p *types.Product) error {
+func (s *MongoProductStore) InsertProduct(ctx context.Context, p *types.Product) (*types.Product, error) {
 	res, err := s.db.Collection(s.coll).InsertOne(ctx, p)
 	if err != nil {
-		return err
+		return nil, err
 	}
 	p.ID = res.InsertedID.(primitive.ObjectID)
 	InsertedIDString := p.ID.Hex()
 	fmt.Println(InsertedIDString)
 
-	return err
+	return p, err
 }
 
 func (s *MongoProductStore) GetAll(ctx context.Context) ([]*types.Product, error) {

@@ -32,24 +32,15 @@ func (h *ProductHandler) HandlePostProduct(c *fiber.Ctx) error {
 			"error": "Failed to create product",
 		})
 	}
-
-	if err := h.store.Insert(c.Context(), product); err != nil {
+	insertedProduct, err := h.store.InsertProduct(c.Context(), product)
+	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"error": "Failed to insert product",
 		})
 	}
 
-	return c.JSON(product)
-}
+	return c.JSON(insertedProduct)
 
-func (h *ProductHandler) HandleGetProducts(c *fiber.Ctx) error {
-	products, err := h.store.GetAll(c.Context())
-	if err != nil {
-		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
-			"error": "Failed to retrieve products",
-		})
-	}
-	return c.JSON(products)
 }
 
 func (h *ProductHandler) HandleGetProductByID(c *fiber.Ctx) error {
