@@ -1,6 +1,6 @@
 module github.com/Osagie-Godstand/og-online-store
 
-go 1.24
+go 1.25
 
 require github.com/gofiber/fiber/v2 v2.46.0
 
