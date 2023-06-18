@@ -52,3 +52,11 @@ func (h *ProductHandler) HandleGetProductByID(c *fiber.Ctx) error {
 
 	return c.JSON(product)
 }
+
+func (h *ProductHandler) HandleGetProducts(c *fiber.Ctx) error {
+	products, err := h.store.GetAll(c.Context())
+	if err != nil {
+		return err
+	}
+	return c.JSON(products)
+}

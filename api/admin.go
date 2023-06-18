@@ -16,5 +16,3 @@ func AdminAuth(c *fiber.Ctx) error {
 	return c.Next()
 
 }
-
-
