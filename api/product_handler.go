@@ -56,7 +56,9 @@ func (h *ProductHandler) HandleGetProductByID(c *fiber.Ctx) error {
 func (h *ProductHandler) HandleGetProducts(c *fiber.Ctx) error {
 	products, err := h.store.GetAll(c.Context())
 	if err != nil {
-		return err
+		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
+			"error": "Failed to get products",
+		})
 	}
 	return c.JSON(products)
 }
