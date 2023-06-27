@@ -1,7 +1,7 @@
 # og-online-store 
 Online Store Backend using Fiber framework and MongoDB
 
-## This version is incomplete.
+## This version does not include the category, cart and orders model.
 
 ## Project outline version1
 - Models: user and product
