@@ -1,7 +1,7 @@
 # og-online-store 
 Online Store Backend using Fiber framework and MongoDB
 
-## This version does not include the category, cart and orders model.
+## This version does not include the category, cart and order models.
 
 ## Project outline version1
 - Models: user and product
@@ -44,6 +44,5 @@ docker run --name mongodb -d mongo:latest -p 27017:27017
 
 ## godotenv (.env) file
 ...
-go install github.com/joho/godotenv/cmd/godotenv@latest
 go get github.com/joho/godotenv
 ...
