@@ -10,6 +10,13 @@ Online Store Backend using Fiber framework and MongoDB
 - Scripts -> database management -> seeding, migration
 - Testing for user and auth handlers
 
+## Automating Go Application with Makefile
+- use command: 'make build' to build target
+- 'make run' to run target
+- 'make seed' to script target
+- 'make test' to test target 
+
+
 ## Resources
 ### Mongodb driver
 Documantation
