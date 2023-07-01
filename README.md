@@ -1,4 +1,4 @@
-# og-online-store 
+# online-shop-apiv1 
 Online Store Backend using Fiber framework and MongoDB
 
 ## This version does not include the category, cart and order models.
