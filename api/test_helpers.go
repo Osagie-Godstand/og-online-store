@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Osagie-Godstand/og-online-store/db"
+	"github.com/Osagie-Godstand/online-shop-apiv1/db"
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

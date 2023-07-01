@@ -1,4 +1,4 @@
-module github.com/Osagie-Godstand/og-online-store
+module github.com/Osagie-Godstand/online-shop-apiv1
 
 go 1.25
 

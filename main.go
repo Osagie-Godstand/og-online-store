@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/Osagie-Godstand/og-online-store/api"
-	"github.com/Osagie-Godstand/og-online-store/db"
+	"github.com/Osagie-Godstand/online-shop-apiv1/api"
+	"github.com/Osagie-Godstand/online-shop-apiv1/db"
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"

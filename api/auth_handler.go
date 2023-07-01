@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/Osagie-Godstand/og-online-store/db"
-	"github.com/Osagie-Godstand/og-online-store/types"
+	"github.com/Osagie-Godstand/online-shop-apiv1/db"
+	"github.com/Osagie-Godstand/online-shop-apiv1/types"
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v5"
 	"go.mongodb.org/mongo-driver/mongo"

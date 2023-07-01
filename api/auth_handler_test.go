@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/Osagie-Godstand/og-online-store/db/fixtures"
+	"github.com/Osagie-Godstand/online-shop-apiv1/db/fixtures"
 	"github.com/gofiber/fiber/v2"
 )
 

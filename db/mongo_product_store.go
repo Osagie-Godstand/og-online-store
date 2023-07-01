@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Osagie-Godstand/og-online-store/types"
+	"github.com/Osagie-Godstand/online-shop-apiv1/types"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

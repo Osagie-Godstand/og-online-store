@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/Osagie-Godstand/og-online-store/db"
-	"github.com/Osagie-Godstand/og-online-store/types"
+	"github.com/Osagie-Godstand/online-shop-apiv1/db"
+	"github.com/Osagie-Godstand/online-shop-apiv1/types"
 )
 
 func AddUser(store *db.Store, fn, ln string, admin bool) *types.User {

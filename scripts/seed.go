@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/Osagie-Godstand/og-online-store/api"
-	"github.com/Osagie-Godstand/og-online-store/db"
-	"github.com/Osagie-Godstand/og-online-store/db/fixtures"
+	"github.com/Osagie-Godstand/online-shop-apiv1/api"
+	"github.com/Osagie-Godstand/online-shop-apiv1/db"
+	"github.com/Osagie-Godstand/online-shop-apiv1/db/fixtures"
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

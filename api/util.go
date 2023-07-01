@@ -3,7 +3,7 @@ package api
 import (
 	"fmt"
 
-	"github.com/Osagie-Godstand/og-online-store/types"
+	"github.com/Osagie-Godstand/online-shop-apiv1/types"
 	"github.com/gofiber/fiber/v2"
 )
 

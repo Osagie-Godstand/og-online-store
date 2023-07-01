@@ -3,8 +3,8 @@ package api
 import (
 	"net/http"
 
-	"github.com/Osagie-Godstand/og-online-store/db"
-	"github.com/Osagie-Godstand/og-online-store/types"
+	"github.com/Osagie-Godstand/online-shop-apiv1/db"
+	"github.com/Osagie-Godstand/online-shop-apiv1/types"
 	"github.com/gofiber/fiber/v2"
 )
 
