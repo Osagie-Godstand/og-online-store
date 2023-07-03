@@ -15,6 +15,7 @@ Online Store Backend using Fiber framework and MongoDB
 - 'make build' to build target
 - 'make run' to run target
 - 'make seed' to seed target
+- 'make docker' to build target api with docker
 - 'make test' to test target 
 
 
