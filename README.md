@@ -12,11 +12,11 @@ Online Store Backend using Fiber framework and MongoDB
 
 # Project environment variables
 ...
-HTTP_LISTEN_ADDRESS=:8080
-JWT_SECRET=
-MONGO_DB_NAME=online-store-apiv1
-MONGO_DB_URL=mongodb://localhost:27017
-MONGO_DB_URL_TEST=mongodb://localhost:27017
+- HTTP_LISTEN_ADDRESS=:8080
+- JWT_SECRET=
+- MONGO_DB_NAME=online-store-apiv1
+- MONGO_DB_URL=mongodb://localhost:27017
+- MONGO_DB_URL_TEST=mongodb://localhost:27017
 ...
 
 ## Automating Go Application with Makefile
