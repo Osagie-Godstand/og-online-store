@@ -10,7 +10,7 @@ Online Store Backend using Fiber framework and MongoDB
 - Scripts -> database management -> seeding, migration
 - Testing for user and auth handlers
 
-# Project environment variables
+## Project environment variables
 ...
 - HTTP_LISTEN_ADDRESS=:8080
 - JWT_SECRET=
